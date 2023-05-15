@@ -12,17 +12,11 @@ class MainViewModel : ViewModel() {
 
     private val repository = ShopListRepositoryImpl
 
-
         private val getShopListUseCase = GetShopListUseCase(repository)
         private val deleteShopItemUseCase = DeleteShopItemUseCase(repository)
         private val editShopItemUseCase = EditShopItemUseCase(repository)
 
-
-
-
     val shoplist = getShopListUseCase.getShopList()
-
-
 
 
     fun deleteShopItem(shopItem: ShopItem){
@@ -37,7 +31,5 @@ class MainViewModel : ViewModel() {
 
 
     }
-
-
 
 }

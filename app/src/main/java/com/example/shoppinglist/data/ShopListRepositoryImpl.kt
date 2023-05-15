@@ -7,8 +7,7 @@ import com.example.shoppinglist.domain.ShopListRepository
 import java.lang.RuntimeException
 
 
-
-    object ShopListRepositoryImpl: ShopListRepository
+object ShopListRepositoryImpl: ShopListRepository
 
 
     {
@@ -17,10 +16,18 @@ import java.lang.RuntimeException
         private  var autoIncrementId = 0;
 
 
+        init {
+            for (i in 0 until 1000) {
+                val item = ShopItem("Name $i", i, true)
+                addShopItem(item)
+            }
+        }
+
+
+
         override fun addShopItem(shopItem: ShopItem) {
             if(shopItem.id == ShopItem.UNDEFINED_ID){
-               shopItem.id = autoIncrementId
-            autoIncrementId++
+               shopItem.id =autoIncrementId++
             }
             shoplist.add(shopItem)
             updateList()
