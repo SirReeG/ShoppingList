@@ -13,8 +13,9 @@ import java.lang.RuntimeException
 
     {
         private val shopListLiveData = MutableLiveData<List<ShopItem>>()
-        private val shoplist = mutableListOf<ShopItem>()
+        private val shoplist = sortedSetOf<ShopItem>({ o1, o2 -> o1.id.compareTo(o2.id) })
         private  var autoIncrementId = 0;
+
 
         override fun addShopItem(shopItem: ShopItem) {
             if(shopItem.id == ShopItem.UNDEFINED_ID){
