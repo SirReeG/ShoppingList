@@ -18,7 +18,7 @@ object ShopListRepositoryImpl: ShopListRepository
 
         init {
             for (i in 0 until 1000) {
-                val item = ShopItem("Name $i", i, true)
+                val item = ShopItem("Название $i", i, true)
                 addShopItem(item)
             }
         }
@@ -35,6 +35,7 @@ object ShopListRepositoryImpl: ShopListRepository
 
         override fun deleteShopItem(shopItem: ShopItem) {
             shoplist.remove(shopItem)
+            updateList()
         }
 
         override fun edtiShopItem(shopItem: ShopItem)

@@ -1,5 +1,11 @@
 <resources>
-    <string name="app_name">ShoppingList</string>
+    <string name="app_name">Список покупок</string>
+    <string name="name_hint">Название товара:</string>
+    <string name="count_hint">Колличество товара:</string>
+    <string name="save_btn">Сохранить</string>
+    <string name="error_input_name">Не верное название</string>
+    <string name="error_input_count">Не верное колличество</string>
+
 
 
 </resources>
