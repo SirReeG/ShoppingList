@@ -17,7 +17,7 @@ object ShopListRepositoryImpl: ShopListRepository
 
 
         init {
-            for (i in 0 until 1000) {
+            for (i in 1 until 10) {
                 val item = ShopItem("Название $i", i, true)
                 addShopItem(item)
             }
